@@ -190,11 +190,12 @@ let sum = function (a, b) {
 
   ravno.addEventListener('click', () => {
     if ((firstNumber !=='')&&(secondNumber =='')) {
-    secondNumber = display.textContent;    
+    secondNumber = display.textContent;
+    if (secondNumber!=='') {    
     calculate();
     firstNumber = secondNumber;
     secondNumber = '';
-  }
+  }}
 })
 
   function poiskKlassa () {
@@ -214,6 +215,7 @@ let sum = function (a, b) {
   
 
   plus.addEventListener('click', () => {
+    operation = 'plus'
     plus.classList.add('light-theme')
     delit.classList.remove('light-theme')
     umnozhit.classList.remove('light-theme')
@@ -222,6 +224,7 @@ let sum = function (a, b) {
   })
 
   minus.addEventListener('click', () => {
+    operation ='minus'
     minus.classList.add('light-theme')
     delit.classList.remove('light-theme')
     umnozhit.classList.remove('light-theme')
@@ -230,6 +233,7 @@ let sum = function (a, b) {
   })
 
   umnozhit.addEventListener('click', () => {
+    operation = 'umnozhit'
     umnozhit.classList.add('light-theme')
     delit.classList.remove('light-theme')
     minus.classList.remove('light-theme')
@@ -238,6 +242,7 @@ let sum = function (a, b) {
   })
 
   delit.addEventListener('click', () => {
+    operation = 'delit'
     delit.classList.add('light-theme')
     umnozhit.classList.remove('light-theme')
     minus.classList.remove('light-theme')
