@@ -33,7 +33,7 @@ let calculate = function () {
   result = null;
  }
  else {
- secondNumber = result.toString().substr(0, 25);
+ secondNumber = result.toString().substr(0, 20);
  updateDisplay();
  firstNumber = secondNumber;
  secondNumber = '';
@@ -92,7 +92,7 @@ let sum = function (a, b) {
  
   let display = document.querySelector('#vihod')
   display.textContent = ''
-  display.style = "background-color: gray; width: 100%; height: 90%; text-align:end; align-content:end; font-size: 45px; border-radius:15px; border-color: black; font-weight: bold;"
+  display.style = "background-color: gray; width: 100%; height: 90%; text-align:end; align-content:end; font-size: 40px; border-radius:15px; border-color: black; font-weight: bold;"
   
   function usloviyaKnopkiCifri (cifra) {
     if (((display.textContent).length < 16)&&(display.textContent !=='0')) {
