@@ -1,0 +1,133 @@
+* {
+    background-color: black;
+    }
+    
+    html {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;    
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 500px; 
+        width: 500px; 
+        border: 15px solid white;
+        border-radius: 2%;
+        
+            
+    }
+    
+    
+    
+    
+    
+    .lines {    
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        gap: 8px
+        
+    }
+    
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25%;
+        background-color: white;
+    }
+    
+    output {
+        width: 100%;
+        height: 100%;
+        border: 3px solid white;
+        background-color: white;
+                
+    }
+    
+    .first-line,
+    .second-line,
+    .third-line,
+    .fourth-line,
+    .fifth-line {
+        display: flex;
+        flex-grow: 1;    
+        background-color: white;
+        justify-content: center;
+        background-color: white;
+        gap:8px
+    }
+    
+    .first-item,
+    .second-item,
+    .third-item,
+    .fourth-item,
+    .fifth-item {
+        border: 3px solid black;
+        width: 25%;
+        height: 100%;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        align-content: center;
+        font-weight: bolder; 
+        border-radius: 8%;
+        background-color: rgb(27, 112, 84);
+          
+    }
+    
+    .zero {
+        border: 3px solid black;
+        width: 25%;
+        height: 100%;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        align-content: center;
+        font-weight: bolder; 
+        border-radius: 5%;
+        width: 53%; 
+        background-color: rgb(27, 112, 84);   
+    }
+    
+    
+    
+    
+    .first-line .first-item,
+    .first-line .second-item,
+    .first-line .third-item {
+        background-color: rgb(66, 43, 121);
+    }
+    
+    .fourth-item {
+        background-color:brown;
+    }
+    
+    button:active {
+        background-color:rgb(66, 43, 121)
+    }
+    
+    .first-item:active {
+        background-color:rgb(66, 43, 121)
+    }
+    
+    .second-item:active {
+        background-color:rgb(66, 43, 121)
+    }
+    
+    .third-item:active {
+        background-color: rgb(66, 43, 121)
+    }
+
+    
+
+    .light-theme {
+        background-color: red;
+    }
