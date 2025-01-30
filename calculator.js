@@ -2,9 +2,6 @@ let firstNumber = ''
 let secondNumber = ''
 let operation = null;
 let result
-
-
- 
  
 let calculate = function () { 
   const first = parseFloat(firstNumber);
@@ -38,9 +35,7 @@ let calculate = function () {
  firstNumber = secondNumber;
  secondNumber = '';
 }}
-
-function addOperation(oper) {
-  
+function addOperation(oper) {  
   if ((firstNumber !== '')&&(secondNumber !== '')) {
     operation = oper;
     calculate();
@@ -48,8 +43,7 @@ function addOperation(oper) {
   else if ((firstNumber =='')&&(secondNumber =='')) {
     operation = oper;
     firstNumber = display.textContent;
-    display.textContent = '';
-    
+    display.textContent = '';    
 }
   else if ((firstNumber !=='')&&(secondNumber =='')) {     
     secondNumber = display.textContent;
@@ -69,9 +63,7 @@ function addOperation(oper) {
 
 let sum = function (a, b) {
     return a + b
-  }
-
- 
+  } 
   let difference = function (a, b) {
     return a - b
   }
@@ -87,13 +79,11 @@ let sum = function (a, b) {
   function updateDisplay () {
     display.textContent = secondNumber;
   }
-
-
  
   let display = document.querySelector('#vihod')
   display.textContent = ''
   display.style = "background-color: gray; width: 100%; height: 90%; text-align:end; align-content:end; font-size: 40px; border-radius:15px; border-color: black; font-weight: bold;"
-  
+ 
   function usloviyaKnopkiCifri (cifra) {
     if (((display.textContent).length < 16)&&(display.textContent !=='0')) {
       display.textContent += cifra;      
@@ -107,17 +97,10 @@ let sum = function (a, b) {
       display.textContent += '.'
     }
   }
-
   function usloviyaKnopkiCifriNolja () {
     if ((vihod.textContent!= '0')&&(vihod.textContent.length < 16)) {
       display.textContent += '0';
   }}
-
-  
-
-
-  
-
   C.addEventListener('click', () => {
     poiskKlassa ()
     firstNumber = ''
@@ -132,25 +115,18 @@ let sum = function (a, b) {
       display.textContent = display.textContent.slice(0, -1);
     }
   })
-
   plusminus.addEventListener('click', () => {
     if (display.textContent !='') {
     display.textContent *= -1; 
   }})
-
-
-   
-
   zero.addEventListener ('click', () => {
     poiskKlassa ()
     usloviyaKnopkiCifriNolja()
   })
-
   tochka.addEventListener ('click', () => {
     poiskKlassa ()
     usloviyaKnopkiTochka()
   })
-
   one.addEventListener('click', () => {
     poiskKlassa ()
     usloviyaKnopkiCifri('1')
@@ -187,7 +163,6 @@ let sum = function (a, b) {
     poiskKlassa ();
     usloviyaKnopkiCifri('9')
   })
-
   ravno.addEventListener('click', () => {
     if ((firstNumber !=='')&&(secondNumber =='')) {
     secondNumber = display.textContent;
@@ -197,57 +172,47 @@ let sum = function (a, b) {
     secondNumber = '';
   }}
 })
-
   function poiskKlassa () {
       if (plus.classList.contains('light-theme')||minus.classList.contains('light-theme')
       ||umnozhit.classList.contains('light-theme')||delit.classList.contains('light-theme')) {
-      plus.classList.remove('light-theme')
-    minus.classList.remove('light-theme')
-   umnozhit.classList.remove('light-theme')
-   delit.classList.remove('light-theme')
+  plus.classList.remove('light-theme')
+  minus.classList.remove('light-theme')
+  umnozhit.classList.remove('light-theme')
+  delit.classList.remove('light-theme')
   display.textContent = ''}}
       
-
-  
-   
-
-    
-  
-
-  plus.addEventListener('click', () => {
-    operation = 'plus'
+  plus.addEventListener('click', () => {   
     plus.classList.add('light-theme')
     delit.classList.remove('light-theme')
     umnozhit.classList.remove('light-theme')
     minus.classList.remove('light-theme')   
     addOperation('plus');
+    operation = 'plus';
   })
 
-  minus.addEventListener('click', () => {
-    operation ='minus'
+  minus.addEventListener('click', () => {    
     minus.classList.add('light-theme')
     delit.classList.remove('light-theme')
     umnozhit.classList.remove('light-theme')
     plus.classList.remove('light-theme')     
     addOperation('minus');
+    operation = 'minus';
   })
-
-  umnozhit.addEventListener('click', () => {
-    operation = 'umnozhit'
+  umnozhit.addEventListener('click', () => {    
     umnozhit.classList.add('light-theme')
     delit.classList.remove('light-theme')
     minus.classList.remove('light-theme')
     plus.classList.remove('light-theme')  
     addOperation('umnozhit');
+    operation = 'umnozhit';
   })
-
-  delit.addEventListener('click', () => {
-    operation = 'delit'
+  delit.addEventListener('click', () => {    
     delit.classList.add('light-theme')
     umnozhit.classList.remove('light-theme')
     minus.classList.remove('light-theme')
     plus.classList.remove('light-theme')
     addOperation('delit');
+    operation = 'delit'  
   })
 
 
